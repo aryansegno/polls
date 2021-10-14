@@ -5,6 +5,35 @@ li a {
     color: green;
     font-size: 25px;
 }
-body {
+/* body {
     background: white url("images/background.gif") no-repeat;
+} */
+
+.body{background-color: black;}
+
+.container {max-width: 1140px;}
+.section-header {color: #fff;margin-bottom: 70px;text-align: center;position: relative;}
+.container {width: 100%;padding-right: 100px;padding-left: 100px;margin-left: auto;margin-right: auto;  }
+
+.row {display: flex;flex-wrap: wrap;margin-right: -15px;margin-left: -15px;}
+
+.section-header {margin-bottom: 0px; text-align: center; position: relative;}
+
+.body{background-color: black;}
+
+.testimonial-item {
+    padding: 30px;
+    margin: 15px;
+    background: #fff;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: 0 0 14px rgb(191 191 191 / 24%);
+}
+.section-header .section-title {
+    font-size: 30px;
+    margin-bottom: 0;
+    font-family: rubik,sans-serif;
+    font-weight: 700;
+    color: #333;
+    position: relative;
 }

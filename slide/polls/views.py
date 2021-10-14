@@ -2,7 +2,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
 from django.views import generic
-from .models import Choice, Question
+from .models import Choice, Question, Post
 
 class IndexView(generic.ListView):
     template_name = 'polls/index.html'
@@ -15,6 +15,7 @@ class IndexView(generic.ListView):
 class DetailView(generic.DetailView):
     model = Question
     template_name = 'polls/detail.html'
+
 
 
 class ResultsView(generic.DetailView):
@@ -38,3 +39,9 @@ def vote(request, question_id):
 def results(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
     return render(request, 'polls/results.html', {'question': question})
+
+
+def PostView(request):
+    post = Post.objects.all()
+    print(post)
+    return render(request,'polls/post.html',{'post':post})
