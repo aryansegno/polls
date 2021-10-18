@@ -28,8 +28,8 @@ class Choice(models.Model):
 
 class Post(models.Model):
     title = models.CharField(max_length=160)
-    text = models.TextField(max_length=500)
-    images = models.ImageField(null=True, blank = True , upload_to = "images/")
+    text = models.TextField()
+    images = models.ImageField( upload_to = "images/")
 
     def __str__(self):
         return self.title
